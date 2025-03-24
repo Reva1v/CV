@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
 :root {
-    --font-family: "Arial", sans-serif;
     --font-color-secondary: #73808D;
     --font-color-link-active: #444c51;
+    --font-size--4rem: clamp(2rem, 1.243rem + 3.11vw, 4rem);
+    --font-size--3_25rem: clamp(1.3rem, -0.093rem + 3.714vw, 3.25rem);
+    --font-size--1_5rem: clamp(1rem, 0.811rem + 0.78vw, 1.5rem);
+    --font-size--1_125rem: clamp(0.9rem, 0.739rem + 0.429vw, 1.125rem);
+    --font-size--0_875rem: clamp(0.775rem, 0.737rem + 0.16vw, 0.875rem);
+
 }
 
 html {
@@ -43,7 +48,7 @@ h3 {
 h4 {
     text-transform: uppercase;
     font-weight: 100;
-    margin: 5px 0 10px;
+    margin: 0 0 10px;
 }
 
 h5 {
@@ -52,7 +57,7 @@ h5 {
     margin: 10px 0 10px;
 }
 
-p{
+p {
     margin: 0;
 }
 
@@ -64,37 +69,26 @@ a:visited {
     color: var(--font-color-secondary);
 }
 
-a:active{
+a:active {
     color: var(--font-color-link-active);
-}
-
-.container {
-    width: 100%;
 }
 
 .CV-page {
     background: white;
     max-width: 1000px;
     width: 100%;
-    height: 1240px;
+    height: 1140px;
     margin: 0 auto;
     padding: 70px;
     box-shadow: rgba(7, 7, 6, 5.3) 0 0 20px 10px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
 
 }
 
-header {
-    display: flex;
-    gap: 235px
-}
-
-.info-columns {
-    gap: 75px;
-    display: flex;
-
+.name {
+    height: 132px;
 }
 
 .avatar {
@@ -111,17 +105,31 @@ header {
     margin: -16px 0 0 -34px;
 }
 
-.history-colum ul{
+.info-columns {
+    gap: 75px;
+    display: flex;
+}
+
+.history-colum {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.history-colum ul {
     display: grid;
     gap: 25px;
 }
 
-.experience{
+.experience {
     margin-bottom: 25px;
 }
 
 .info-colum {
     color: var(--font-color-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .info-block {
@@ -132,6 +140,10 @@ header {
     display: grid;
     gap: 5px;
     margin-top: 5px;
+}
+
+.info-block .contact__list ul {
+    margin-top: 0;
 }
 
 .tools__list ul {
@@ -162,4 +174,27 @@ header {
 
 .other-skills__list li:not(:last-child)::after {
     content: ",";
+}
+
+@media (max-width: 900px) {
+    body {
+        background: white;
+    }
+
+    .CV-page {
+        box-shadow: none;
+        padding: 0;
+        height: auto;
+    }
+    .info-columns{
+        gap: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+
+}
+
+@media (max-width: 390px) {
+
 }
