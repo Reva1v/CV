@@ -3,12 +3,8 @@
 :root {
     --font-color-secondary: #73808D;
     --font-color-link-active: #444c51;
-    --font-size--4rem: clamp(2rem, 1.243rem + 3.11vw, 4rem);
-    --font-size--3_25rem: clamp(1.3rem, -0.093rem + 3.714vw, 3.25rem);
-    --font-size--1_5rem: clamp(1rem, 0.811rem + 0.78vw, 1.5rem);
-    --font-size--1_125rem: clamp(0.9rem, 0.739rem + 0.429vw, 1.125rem);
-    --font-size--0_875rem: clamp(0.775rem, 0.737rem + 0.16vw, 0.875rem);
-
+    --font-size--16px: clamp(0.5rem, 0.1rem + 1.6vw, 1rem);;
+    --size--132px: clamp(3.125rem, -0.975rem + 16.4vw, 8.25rem);
 }
 
 html {
@@ -26,6 +22,7 @@ body {
 }
 
 li {
+    font-size: var(--font-size--16px);
     list-style: none;
 }
 
@@ -34,31 +31,42 @@ ul {
 }
 
 h1 {
+    font-size: clamp(1rem, 0.2rem + 3.2vw, 2rem);
     margin: 0;
 }
 
 h2 {
+    font-size: clamp(0.75rem, 0.15rem + 2.4vw, 1.5rem);
+    margin: 20px 0 0 0;
     font-weight: 100;
 }
 
 h3 {
-    margin: 0 auto;
+    font-size: clamp(0.585rem, 0.117rem + 1.872vw, 1.17rem);
+    margin: 0;
 }
 
 h4 {
+    font-size: var(--font-size--16px);
     text-transform: uppercase;
     font-weight: 100;
     margin: 0 0 10px;
 }
 
 h5 {
+    font-size: clamp(0.415rem, 0.083rem + 1.328vw, 0.83rem);
     color: var(--font-color-secondary);
     font-weight: 100;
     margin: 10px 0 10px;
 }
 
 p {
+    font-size: var(--font-size--16px);
     margin: 0;
+}
+
+a {
+    font-size: var(--font-size--16px);
 }
 
 a:link {
@@ -75,11 +83,10 @@ a:active {
 
 .CV-page {
     background: white;
-    max-width: 1000px;
-    width: 100%;
-    height: 1140px;
+    width: 21cm;
+    height: 29.7cm;
     margin: 0 auto;
-    padding: 70px;
+    padding: 65px;
     box-shadow: rgba(7, 7, 6, 5.3) 0 0 20px 10px;
     display: flex;
     flex-direction: column;
@@ -88,25 +95,24 @@ a:active {
 }
 
 .name {
-    height: 132px;
+    height: var(--size--132px);
 }
 
 .avatar {
-    width: 132px;
-    height: 132px;
+    width: var(--size--132px);
+    height: var(--size--132px);
     overflow: hidden;
     border-radius: 50%;
     box-shadow: 2px 2px 20px -10px #000000;
 }
 
 .personalPhoto {
-    width: auto;
-    height: 130%;
-    margin: -16px 0 0 -34px;
+    width: var(--size--132px);
+    height: var(--size--132px);
 }
 
 .info-columns {
-    gap: 75px;
+    gap: 70px;
     display: flex;
 }
 
@@ -133,7 +139,7 @@ a:active {
 }
 
 .info-block {
-    width: 300px;
+    width: clamp(8.125rem, -0.375rem + 34vw, 18.75rem);
 }
 
 .info-block ul {
@@ -186,15 +192,64 @@ a:active {
         padding: 0;
         height: auto;
     }
-    .info-columns{
+
+    .info-columns {
         gap: 55px;
     }
 }
 
 @media (max-width: 600px) {
+    body {
+        padding: 25px;
+    }
+
+    .name h2 {
+        margin: 5px 0 0 0;
+    }
+
+    .info-columns {
+        gap: 30px;
+    }
+
+    .history-colum ul {
+        gap: 15px;
+        margin: 10px 0 10px 0;
+    }
+
+    .experience {
+        margin-bottom: 20px;
+    }
 
 }
 
-@media (max-width: 390px) {
+@media (max-width: 400px) {
+    body {
+        padding: 20px;
+    }
+
+    .name h2 {
+        margin: 0;
+    }
+
+    h5 {
+        margin: 5px 0 5px 0;
+    }
+
+    .info-columns {
+        gap: 25px;
+    }
+
+    .info-colum {
+        gap: 15px;
+    }
+
+    .history-colum {
+        gap: 15px;
+    }
+
+    .history-colum ul {
+        gap: 10px;
+        margin: 5px 0 5px 0;
+    }
 
 }
