@@ -81,6 +81,45 @@ a:active {
     color: var(--font-color-link-active);
 }
 
+ .download-pdf-button {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     padding: 10px 20px;
+     background-color: #738089;
+     color: white;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     font-size: 16px;
+     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+     z-index: 1000;
+ }
+
+.download-pdf-button:hover {
+    background-color: #444c51;
+}
+
+@media print {
+    .download-pdf-button {
+        display: none; !important;
+    }
+
+    body {
+        background: white;
+        margin: 0.1in;
+        padding: 0;
+    }
+
+    .CV-page {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+}
+
+
 .CV-page {
     background: white;
     width: 21cm;
@@ -195,6 +234,9 @@ a:active {
 
     .info-columns {
         gap: 55px;
+    }
+    .download-pdf-button{
+        right: auto;
     }
 }
 
