@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
 :root {
-    --font-color-secondary: #73808D;
+    --font-color-secondary: #646f7a;
     --font-color-link-active: #444c51;
     --font-size--16px: clamp(0.5rem, 0.1rem + 1.6vw, 1rem);;
     --size--132px: clamp(3.125rem, -0.975rem + 16.4vw, 8.25rem);
