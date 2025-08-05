@@ -81,11 +81,9 @@ a:active {
     color: var(--font-color-link-active);
 }
 
-.download-pdf-button {
+button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: #738089;
     color: white;
     border: none;
@@ -94,14 +92,31 @@ a:active {
     font-size: 16px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    display: flex;
+    gap: 10px;
 }
 
-.download-pdf-button:hover {
+button:hover {
     background-color: #444c51;
+}
+
+.download-pdf-button {
+    bottom: 20px;
+    right: 20px;
+}
+
+.change-language-button {
+    bottom: 20px;
+    left: 20px;
 }
 
 @media print {
     .download-pdf-button {
+        display: none;
+    !important;
+    }
+
+    .change-language-button {
         display: none;
     !important;
     }
@@ -124,7 +139,7 @@ a:active {
 .CV-page {
     background: white;
     width: 21cm;
-    height: 29.7cm;
+    /*height: 29.7cm;*/
     margin: 0 auto;
     padding: 65px;
     box-shadow: rgba(7, 7, 6, 5.3) 0 0 20px 10px;
@@ -169,6 +184,10 @@ a:active {
 
 .experience {
     margin-bottom: 25px;
+}
+
+.experience p {
+    margin-bottom: 5px;
 }
 
 .info-colum {
@@ -238,13 +257,34 @@ a:active {
     }
 
     .download-pdf-button {
-        right: auto;
+        right: 40px;
+    }
+
+    .change-language-button {
+        left: 40px;
     }
 }
 
 @media (max-width: 600px) {
     body {
         padding: 25px;
+        margin-bottom: 50px;
+    }
+
+    button {
+        padding: 15px 30px;
+    }
+
+    .change-language-button i {
+        font-size: 1.5rem;
+    }
+
+    .download-pdf-button i {
+        font-size: 1.5rem;
+    }
+
+    .btn-text {
+        display: none;
     }
 
     .name h2 {
@@ -269,6 +309,7 @@ a:active {
 @media (max-width: 400px) {
     body {
         padding: 20px;
+        margin-bottom: 60px;
     }
 
     .name h2 {
