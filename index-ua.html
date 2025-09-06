@@ -11,6 +11,7 @@
     <meta content="true" name="HandheldFriendly"/>
     <meta content="width" name="MobileOptimized"/>
     <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
 
@@ -104,43 +105,15 @@
                     </div>
                     <div class="skills__list">
                         <h3>Навички</h3>
-                        <ul>
-                            <li>React</li>
-                            <li>TypeScript</li>
-                            <li>Next.js</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>Tailwind CSS</li>
-                            <li>Drizzle ORM</li>
-                            <li>Webpack</li>
-                            <li>Redux Toolkit</li>
-                            <li>JavaScript</li>
-                            <li>Node.js Express</li>
-                            <li>Vite</li>
-                        </ul>
+                        <div id="skills-container"></div>
                     </div>
                     <div class="tools__list">
                         <h3>Інструменти та технології</h3>
-                        <ul>
-                            <li>PostgreSQL</li>
-                            <li>Docker</li>
-                            <li>Postman</li>
-                            <li>GIT</li>
-                            <li>Claude</li>
-                            <li>Sourcetree</li>
-                            <li>Figma</li>
-                            <li>Adobe Photoshop</li>
-                            <li>Bitbucket</li>
-                        </ul>
+                        <div id="tools-container"></div>
                     </div>
                     <div class="industry-knowledge__list">
                         <h3>Професійні знання</h3>
-                        <ul>
-                            <li>REST API</li>
-                            <li>Responsive design</li>
-                            <li>User interface</li>
-                            <li>User Experience</li>
-                        </ul>
+                        <div id="industry-knowledge-container"></div>
                     </div>
                     <div class="languages__list">
                         <h3>Мови</h3>
@@ -163,4 +136,10 @@
     </div>
 </div>
 </body>
+<script src="js/getList.js"></script>
+<script>
+    getList("lists/skills.html", "skills-container");
+    getList("lists/tools.html", "tools-container");
+    getList("lists/industry-knowledge.html", "industry-knowledge-container");
+</script>
 </html>
