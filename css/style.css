@@ -19,6 +19,7 @@ body {
     justify-content: center;
     margin: 0 auto;
     padding: 40px;
+    flex-direction: column;
 }
 
 li {
@@ -110,43 +111,49 @@ button:hover {
     left: 20px;
 }
 
-@media print {
-    .download-pdf-button {
-        display: none;
-    !important;
-    }
+@page {
+    size: A4;
+    margin: 0;
+}
 
+.page {
+    background: white;
+    width: 21cm;
+    min-height: 29.7cm;
+    margin-bottom: 35px;
+    padding: 55px;
+    box-shadow: rgba(7, 7, 6, 5) 0 0 20px 10px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+@media print {
+    .download-pdf-button,
     .change-language-button {
-        display: none;
-    !important;
+        display: none !important;
     }
 
     body {
         background: white;
-        margin: 0.1in;
+        margin: 0;
         padding: 0;
     }
 
-    .CV-page {
+    .page {
         box-shadow: none;
-        padding: 0;
+        padding: 10mm 15mm;
         margin: 0;
         width: 100%;
+        min-height: auto;
+        height: auto;
+        display: block !important;
+        page-break-after: always;
+        page-break-inside: avoid;
     }
-}
 
-
-.CV-page {
-    background: white;
-    width: 21cm;
-    /*height: 29.7cm;*/
-    margin: 0 auto;
-    padding: 65px;
-    box-shadow: rgba(7, 7, 6, 5.3) 0 0 20px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-
+    .page:last-child {
+        page-break-after: auto;
+    }
 }
 
 .profile-header {
@@ -239,13 +246,15 @@ button:hover {
 
 @media (max-width: 900px) {
     body {
-        background: white;
+        /*background: white;*/
+        padding: 0 40px;
     }
 
-    .CV-page {
+    .page {
         box-shadow: none;
-        padding: 0;
-        height: auto;
+        padding: 35px 40px;
+        min-height: auto;
+        width: 100%;
     }
 
     .info-columns {
@@ -263,8 +272,13 @@ button:hover {
 
 @media (max-width: 600px) {
     body {
-        padding: 25px;
-        margin-bottom: 50px;
+        padding: 0 25px;
+        /*margin-bottom: 50px;*/
+    }
+
+    .page{
+        padding: 25px 30px;
+        margin-bottom: 25px;
     }
 
     button {
@@ -304,8 +318,13 @@ button:hover {
 
 @media (max-width: 400px) {
     body {
-        padding: 20px;
-        margin-bottom: 60px;
+        padding: 0 17px;
+        /*margin-bottom: 60px;*/
+    }
+
+    .page{
+        padding: 15px 20px;
+        margin-bottom: 15px;
     }
 
     .profile-header h2 {

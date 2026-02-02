@@ -12,3 +12,5 @@ package.json
 package-lock.json
 
 withAvatar
+!/CLAUDE.md
+/CLAUDE.md
