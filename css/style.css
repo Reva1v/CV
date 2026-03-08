@@ -157,7 +157,21 @@ button:hover {
 }
 
 .profile-header {
-    height: var(--size--132px);
+    margin-bottom: 15px;
+}
+
+.summary {
+    color: var(--font-color-secondary);
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.projects {
+    margin-bottom: 25px;
+}
+
+.projects p {
+    margin-bottom: 5px;
 }
 
 .avatar {
