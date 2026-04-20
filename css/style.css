@@ -134,9 +134,10 @@ button:hover {
     }
 
     body {
-        background: white;
-        margin: 0;
-        padding: 0;
+        background: white !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .page {
@@ -148,7 +149,7 @@ button:hover {
         height: auto;
         display: block !important;
         page-break-after: always;
-        page-break-inside: avoid;
+        overflow: visible;
     }
 
     .page:last-child {

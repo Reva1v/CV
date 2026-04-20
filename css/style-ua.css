@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300..800&display=swap');
 
-html{
+html {
     font-family: "Rubik", sans-serif;
+}
+
+@media print {
+    .experience,
+    .projects {
+        margin-bottom: 15px;
+    }
+
+    .history-colum ul {
+        gap: 15px;
+    }
+
+    h5 {
+        margin: 5px 0;
+    }
+
+    p {
+        line-height: 1.3;
+    }
 }
