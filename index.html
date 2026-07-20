@@ -28,7 +28,7 @@
         <div class="profile-header">
             <h1>Mruha Oleksandr Andriiovych</h1>
             <h2>Full Stack AI Developer</h2>
-            <p class="summary">Full Stack AI Developer specializing in React, TypeScript, and Python. Built
+            <p class="summary">Full Stack AI Developer specializing in React, TypeScript, Next.js and Python. Built
                 production systems with measurable business impact — including a Telegram/Viber
                 commerce bot that drove $25,000+ in monthly revenue. Delivered 5 independent
                 commercial projects with AI integration, REST API, Docker, Redis, and automated
@@ -55,23 +55,24 @@
                         <h4>projects</h4>
                         <ul>
                             <li>
+                                <h3>UNIC Adapter — Landing Page Localization & Delivery Platform</h3>
+                                <h5>React 19 · TypeScript · Hono · PostgreSQL · Gemini · OIDC · Docker</h5>
+                                <p>Self-hosted full-stack platform for localizing affiliate landing pages
+                                    across 49 markets. AI adaptation pipeline (Google Gemini, parallel requests
+                                    + key rotation), in-browser iframe editor, and one-click publishing that
+                                    validates against DB-driven rules and ships to production via rsync-over-SSH
+                                    — seconds instead of the former ~10-minute CI pipeline. OIDC auth (Authentik)
+                                    with group-based access, Postgres audit trail, and async GitLab backup.</p>
+                            </li>
+                            <li>
                                 <h3>E-Commerce Automation Bot Platform</h3>
                                 <h5>Python · aiogram · Supabase · Viber</h5>
                                 <p>Full-featured Telegram + Viber commerce platform for a premium food
-                                    retailer. Built product catalog, cart, order management, payment
-                                    processing, and admin panel with real-time notifications. Integrated
-                                    with the client's existing database. Scaled customer order processing
-                                    by 200% vs. prior manual workflow. Drove $25,000+ in monthly revenue
-                                    — the client's primary sales channel.</p>
-                            </li>
-                            <li>
-                                <h3>Multi-Tenant Transport Booking System</h3>
-                                <h5>Python · aiogram · Redis · Supabase</h5>
-                                <p>Multi-business Telegram bot platform for ticket booking and parcel
-                                    management. Each business runs an independent bot instance from a single
-                                    codebase. Redis caching for Supabase queries and repeated bot responses
-                                    for fast performance. Parcel tracking, date-picker calendar, data
-                                    validation.</p>
+                                    retailer. Product catalog, cart, order management, payment processing,
+                                    and admin panel with real-time notifications, integrated with the
+                                    client's existing database. Scaled order processing 200% vs. manual
+                                    workflow. Drove $25,000+ in monthly revenue — the client's primary
+                                    sales channel.</p>
                             </li>
                         </ul>
                     </div>
@@ -134,6 +135,15 @@
                         <h4>projects (continued)</h4>
                         <ul>
                             <li>
+                                <h3>Multi-Tenant Transport Booking System</h3>
+                                <h5>Python · aiogram · Redis · Supabase</h5>
+                                <p>Multi-business Telegram bot platform for ticket booking and parcel
+                                    management. Each business runs an independent bot instance from a single
+                                    codebase. Redis caching for Supabase queries and repeated bot responses
+                                    for fast performance. Parcel tracking, date-picker calendar, data
+                                    validation.</p>
+                            </li>
+                            <li>
                                 <h3>Transport CRM — Operations Dashboard for Carriers</h3>
                                 <h5>React · TypeScript · Supabase</h5>
                                 <p>CRM system built as a companion to the booking bot platform.
@@ -141,24 +151,6 @@
                                     and route tracking, driver trip map for vehicle/bus routes.
                                     Full passenger directory with the ability to message any user
                                     directly via the Telegram bot from within the CRM.</p>
-                            </li>
-                            <li>
-                                <h3>Landing Page Localization & Market Adaptation Service</h3>
-                                <h5>React · TypeScript · Vite · Gemini · Supabase · Docker</h5>
-                                <p>AI-powered localization pipeline for affiliate landing pages across
-                                    49 markets. Pre/post-processing stages for content transformation,
-                                    JS obfuscation, and output sanitization. Structured logging,
-                                    bi-directional iframe editor, REST API on Vercel Serverless,
-                                    MCP server for AI agent integration, 132 automated tests, Docker
-                                    deployment.</p>
-                            </li>
-                            <li>
-                                <h3>HTML Content Replacer</h3>
-                                <h5>React · TypeScript · Vite · Gemini · Supabase</h5>
-                                <p>Automated HTML content replacement via Excel files + AI, eliminating
-                                    hours of manual editing per release. Role-based access
-                                    (user/admin/super_admin), AI-assisted fix for missed replacements,
-                                    in-browser HTML formatting with Prettier.</p>
                             </li>
                             <li>
                                 <h3>AI Content Generator for Google Business Profile</h3>
