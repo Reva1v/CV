@@ -2,198 +2,201 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mruha Oleksandr CV</title>
-    <link rel="icon" type="image/x-icon" href="/source/cv_10484998.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oleksandr Mruha — Full Stack Developer CV</title>
+    <meta name="description" content="Oleksandr Mruha — Full Stack Developer (React, TypeScript, Node.js, Python, PostgreSQL, Docker, LLM integration). 2 years of commercial experience.">
+    <meta name="author" content="Oleksandr Mruha">
+    <link rel="icon" type="image/x-icon" href="source/cv_10484998.ico">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/iconfont-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta content="true" name="HandheldFriendly"/>
-    <meta content="width" name="MobileOptimized"/>
-    <meta content="yes" name="apple-mobile-web-app-capable"/>
-    <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
 
-<button class="download-pdf-button" onclick="window.print()"><i class="fas fa-download"></i>
-    <span class="btn-text">Download CV as PDF</span>
-</button>
-<button class="change-language-button" onclick="window.location.href='index-ua.html'"><i class="icon-ukraine"></i>
-    <span class="btn-text">Change to Ukrainian</span>
-</button>
+<div class="controls">
+    <button class="download-pdf-button" onclick="window.print()"><i class="fas fa-download"></i>
+        <span class="btn-text">Download PDF</span>
+    </button>
+    <button class="change-language-button" onclick="window.location.href='index-ua.html'"><i class="icon-ukraine"></i>
+        <span class="btn-text">Українською</span>
+    </button>
+</div>
 
-<!-- Page 1 -->
-<section class="page">
-    <div class="container">
-        <div class="profile-header">
-            <h1>Mruha Oleksandr Andriiovych</h1>
-            <h2>Full Stack AI Developer</h2>
-            <p class="summary">Full Stack AI Developer specializing in React, TypeScript, Next.js and Python. Built
-                production systems with measurable business impact — including a Telegram/Viber
-                commerce bot that drove $25,000+ in monthly revenue. Delivered 5 independent
-                commercial projects with AI integration, REST API, Docker, Redis, and automated
-                testing.</p>
-        </div>
-        <div class="info-columns">
-            <div class="history-colum">
-                <div class="history-block">
-                    <div class="experience">
-                        <h4>experience</h4>
-                        <ul>
-                            <li>
-                                <h3>FullStack Developer at UNIC Media Buying Agency</h3>
-                                <h5>October 2025 – Present · Full-time · Remote</h5>
-                                <p>Designed and developed internal web applications using React, TypeScript, and Vite
-                                    to automate operational processes and improve productivity. Built and optimized
-                                    high-converting promotional websites and landing pages for affiliate campaigns
-                                    (HTML5, CSS3/SCSS, JavaScript ES6+, Tailwind, jQuery) in close collaboration
-                                    with the media buying team.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="projects">
-                        <h4>projects</h4>
-                        <ul>
-                            <li>
-                                <h3>UNIC Adapter — Landing Page Localization & Delivery Platform</h3>
-                                <h5>React 19 · TypeScript · Hono · PostgreSQL · Gemini · OIDC · Docker</h5>
-                                <p>Self-hosted full-stack platform for localizing affiliate landing pages
-                                    across 49 markets. AI adaptation pipeline (Google Gemini, parallel requests
-                                    + key rotation), in-browser iframe editor, and one-click publishing that
-                                    validates against DB-driven rules and ships to production via rsync-over-SSH
-                                    — seconds instead of the former ~10-minute CI pipeline. OIDC auth (Authentik)
-                                    with group-based access, Postgres audit trail, and async GitLab backup.</p>
-                            </li>
-                            <li>
-                                <h3>E-Commerce Automation Bot Platform</h3>
-                                <h5>Python · aiogram · Supabase · Viber</h5>
-                                <p>Full-featured Telegram + Viber commerce platform for a premium food
-                                    retailer. Product catalog, cart, order management, payment processing,
-                                    and admin panel with real-time notifications, integrated with the
-                                    client's existing database. Scaled order processing 200% vs. manual
-                                    workflow. Drove $25,000+ in monthly revenue — the client's primary
-                                    sales channel.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="info-colum">
-                <div class="info-block">
-                    <div class="contact__list">
-                        <h3>Contacts</h3>
-                        <ul>
-                            <li>omruga06@gmail.com</li>
-                            <li>+380 67 296 3603</li>
-                            <li>Telegram <a href="https://t.me/Reva1v">@Reva1v</a></li>
-                        </ul>
-                    </div>
-                    <div class="skills__list">
-                        <h3>Skills</h3>
-                        <div id="skills-container"></div>
-                    </div>
-                    <div class="ai__tools">
-                        <h3>AI Tools</h3>
-                        <div id="ai-tools"></div>
-                    </div>
-                    <div class="tools__list">
-                        <h3>Tools & Technologies</h3>
-                        <div id="tools-container"></div>
-                    </div>
-                    <div class="industry-knowledge__list">
-                        <h3>Industry Knowledge</h3>
-                        <div id="industry-knowledge-container"></div>
-                    </div>
-                    <div class="languages__list">
-                        <h3>Languages</h3>
-                        <ul>
-                            <li>English (B1)</li>
-                            <li>Ukrainian (native)</li>
-                        </ul>
-                    </div>
-                    <div class="professional-links__list">
-                        <h3>Professional Links</h3>
-                        <ul>
-                            <li><a href="https://www.linkedin.com/in/oleksandr-mruha/">linkedin.com/oleksandr-mruha</a>
-                            </li>
-                            <li><a href="https://github.com/Reva1v">github.com/Reva1v</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<main class="page">
 
-<!-- Page 2 -->
-<section class="page">
-    <div class="container">
-        <div class="info-columns">
-            <div class="history-colum">
-                <div class="history-block">
-                    <div class="projects">
-                        <h4>projects (continued)</h4>
-                        <ul>
-                            <li>
-                                <h3>Multi-Tenant Transport Booking System</h3>
-                                <h5>Python · aiogram · Redis · Supabase</h5>
-                                <p>Multi-business Telegram bot platform for ticket booking and parcel
-                                    management. Each business runs an independent bot instance from a single
-                                    codebase. Redis caching for Supabase queries and repeated bot responses
-                                    for fast performance. Parcel tracking, date-picker calendar, data
-                                    validation.</p>
-                            </li>
-                            <li>
-                                <h3>Transport CRM — Operations Dashboard for Carriers</h3>
-                                <h5>React · TypeScript · Supabase</h5>
-                                <p>CRM system built as a companion to the booking bot platform.
-                                    Passenger analytics and metrics, manifest generation, logistics
-                                    and route tracking, driver trip map for vehicle/bus routes.
-                                    Full passenger directory with the ability to message any user
-                                    directly via the Telegram bot from within the CRM.</p>
-                            </li>
-                            <li>
-                                <h3>AI Content Generator for Google Business Profile</h3>
-                                <h5>React · TypeScript · Vite · Gemini · GPT · Claude</h5>
-                                <p>Multi-model content generator (Gemini, GPT, Claude). Produces
-                                    SEO-optimized texts for Google Business Profile — posts, product
-                                    cards, service lists, and business descriptions structured for
-                                    search indexing. IndexedDB storage, multilingual support (any
-                                    language).</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="education">
-                        <h4>education</h4>
-                        <ul>
-                            <li>
-                                <h3>State University of Information and Communication Technologies</h3>
-                                <h5>2023 - 2027</h5>
-                            </li>
-                            <li>
-                                <h3>Frontend Training at Binary Studio Academy</h3>
-                                <h5>May 2025 – August 2025</h5>
-                                <p>Participated in an intensive frontend development course at Binary Studio Academy.
-                                    Gained practical experience with modern technologies including TypeScript, React,
-                                    Redux Toolkit, and Webpack. The program included hands-on projects and code
-                                    reviews.</p>
-                                <a href="https://bitbucket.org/reva1v/workspace/projects/BSA">Link to workspace on
-                                    Bitbucket</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <header class="cv-header">
+        <h1>Oleksandr Mruha</h1>
+        <p class="headline">Full Stack Developer — React, TypeScript, Node.js, Python, AI Agents &amp; LLM Integration</p>
+        <ul class="contact">
+            <li>Kyiv, Ukraine (Remote)</li>
+            <li><a href="mailto:omruga06@gmail.com">omruga06@gmail.com</a></li>
+            <li><a href="tel:+380672963603">+380 67 296 3603</a></li>
+            <li><a href="https://www.linkedin.com/in/oleksandr-mruha/">linkedin.com/in/oleksandr-mruha</a></li>
+            <li><a href="https://github.com/Reva1v">github.com/Reva1v</a></li>
+            <li><a href="https://t.me/Reva1v">t.me/Reva1v</a></li>
+        </ul>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p>Full Stack Developer with 2 years of commercial experience building production web applications,
+            internal tools and Telegram bots end to end: React/TypeScript frontends, Node.js (Hono) and Python
+            backends, PostgreSQL, Docker and CI/CD. Integrate LLMs and AI agents (Claude Code, Anthropic, Gemini,
+            OpenAI) into real business workflows. Key results: Lander Desk, an agent platform that takes landing page
+            tasks from ClickUp to verified production deploys; UNIC Adapter, a localization platform for 49 markets
+            that cut deployment time from ~10 minutes to seconds; and a Telegram/Viber commerce bot that became a
+            client’s main sales channel with $25,000+ in monthly revenue.</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills">
+            <li><strong>Languages:</strong> TypeScript, JavaScript (ES6+), Python, Rust, SQL, HTML5, CSS3/SCSS</li>
+            <li><strong>Frontend:</strong> React, Next.js, Redux Toolkit, Zustand, Tailwind CSS, Vite, Webpack,
+                Storybook, PWA, responsive design; Tauri 2 (desktop)</li>
+            <li><strong>Backend:</strong> Node.js, Hono, REST API, Axum, Tokio, aiogram, Flask, SQLAlchemy, Alembic, Zod,
+                OAuth 2.0/OIDC, JWT, Puppeteer</li>
+            <li><strong>Databases:</strong> PostgreSQL, Redis, Supabase, SQLite</li>
+            <li><strong>AI / LLM:</strong> Google Gemini API, OpenAI API, Anthropic Claude API, AI agents (headless Claude Code,
+                hooks, plugins, MCP), prompt engineering, multi-model pipelines; AI-assisted development (Cursor)</li>
+            <li><strong>DevOps:</strong> Docker, Docker Compose, Nginx, GitLab CI/CD, GitHub Actions, Prometheus,
+                Grafana, Linux, SSH, Vercel, Railway</li>
+            <li><strong>Testing:</strong> Vitest, Playwright, pytest</li>
+            <li><strong>Tools:</strong> Git, GitLab, GitHub, Bitbucket, Postman, Figma, ClickUp</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Full Stack Developer — UNIC Media Buying Agency</h3>
+                <span class="dates">Oct 2024 – Present</span>
             </div>
-        </div>
-    </div>
-</section>
+            <p class="meta">Full-time · Remote</p>
+
+            <p class="subhead">Lander Desk — AI agent platform for landing page production</p>
+            <p class="meta">Tauri 2 · Rust (Tokio, Axum) · React · TypeScript · Node.js · Claude Code · Anthropic API ·
+                Playwright · Docker</p>
+            <ul>
+                <li>Built a system that takes a landing page task from a ClickUp card to a live, verified page
+                    registered in the Binom tracker: a Tauri desktop app (Rust core, React UI) and a headless server for
+                    Docker/Railway from the same Rust crate. ~91K lines of code, 1,800+ automated tests.</li>
+                <li>Orchestrates parallel headless Claude Code agents, one per task, with recipes per task type, a
+                    custom Claude Code plugin (hooks, tools, review subagent), live logs and sessions that survive
+                    restarts; a second mode runs agents on the Anthropic API with budget tracking.</li>
+                <li>Agents adapt and fix pages, strip third-party trackers and insert the order form. They then
+                    compare the result with the original in Chrome via Playwright at desktop, tablet and mobile
+                    widths. A fail-closed deploy gate requires proof for every item and green checks.</li>
+                <li>Automated everything after deploy: live checks, Binom landing and offer setup, ClickUp field and
+                    status updates, plus a Telegram bot and Mini App for remote control. In its first 10 days it
+                    processed 68 tasks (390 work items), and 39 deploys ran with no manual steps.</li>
+            </ul>
+
+            <p class="subhead">UNIC Adapter — landing page localization and delivery platform</p>
+            <p class="meta">React 19 · TypeScript · Node.js · Hono · PostgreSQL · Gemini API · OIDC · Docker</p>
+            <ul>
+                <li>Built and own a self-hosted platform that localizes affiliate landing pages for 49 markets.</li>
+                <li>Designed an AI adaptation pipeline on the Google Gemini API with parallel requests and API key
+                    rotation, plus an in-browser iframe editor for manual corrections.</li>
+                <li>Replaced ~10-minute GitLab CI deployments with one-click publishing: DB-driven validation, then
+                    rsync over SSH to 6 production tracker servers, so pages go live in seconds.</li>
+                <li>Implemented SSO via OIDC (Authentik) with group-based access and a PostgreSQL audit trail; set up
+                    Prometheus/Grafana monitoring with Telegram alerts; 280+ Vitest test files.</li>
+            </ul>
+
+            <p class="subhead">Other work</p>
+            <ul>
+                <li>Shipped smaller internal AI tools on the same stack (React, Hono, Gemini): a landing page
+                    generator from text briefs, an SEO article generator and a UI component library.</li>
+                <li>Developed and optimized high-converting promo websites and landing pages (HTML5, SCSS,
+                    JavaScript, Tailwind CSS, jQuery) together with the media buying team.</li>
+            </ul>
+        </article>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Freelance Full Stack Developer</h3>
+                <span class="dates">Dec 2025 – Present</span>
+            </div>
+            <p class="meta">Contract · Remote</p>
+            <ul>
+                <li><strong>E-commerce bot platform</strong> for a premium food retailer: Telegram (aiogram) and
+                    Viber (Flask) bots with catalog, cart, payments and admin panel on Supabase. Became the client’s
+                    primary sales channel with $25,000+ in monthly revenue; order processing capacity up 200%.</li>
+                <li><strong>Multi-tenant transport booking platform:</strong> one Python codebase runs a separate
+                    Telegram bot for each carrier (tickets, parcels, tracking), Redis caching; companion React/TypeScript
+                    CRM with passenger analytics, manifests and route map.</li>
+                <li><strong>Reply-time SLA bot:</strong> tracks response times in work chats within working hours
+                    and escalates silence from manager to head to owner. Python, SQLAlchemy, Alembic, PostgreSQL,
+                    Anthropic and Gemini APIs, Docker, GitHub Actions CI/CD.</li>
+                <li><strong>Website for a Kyiv print shop and gift store:</strong> Next.js 16 (App Router), React 19,
+                    Supabase, next-intl, Vercel, Vitest and Playwright end-to-end tests.</li>
+            </ul>
+        </article>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>AI Content Generator for Google Business Profile</h3>
+            </div>
+            <p class="meta">React · TypeScript · Vite · Gemini API · OpenAI API · Claude API · IndexedDB</p>
+            <p>Multi-model generator of SEO-optimized posts, product cards, service lists and business
+                descriptions for Google Business Profile in any language.</p>
+        </article>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>HoldMix — Hold-a-Hotkey Volume Mixer for Windows</h3>
+                <a class="dates" href="https://github.com/Reva1v/HoldMix">github.com/Reva1v/HoldMix</a>
+            </div>
+            <p class="meta">Rust · Tauri 2 · windows-rs (Core Audio / WASAPI, WinRT) · React · TypeScript · Tailwind CSS</p>
+            <p>Open-source overlay mixer shown while a hotkey is held: per-app volume, ~30 fps peak meters, output
+                switching, mic mute, media controls. Multi-threaded Rust backend, event-driven Core Audio updates,
+                50 ms from key press to rendered panel.</p>
+        </article>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Restyle — AI Text Rewriter for Windows</h3>
+            </div>
+            <p class="meta">Tauri (Rust) · React · TypeScript · Gemini / OpenAI / Anthropic APIs</p>
+            <p>Desktop app that rewrites the text you just typed in any input field on a hotkey, with a choice of
+                LLM provider.</p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>State University of Information and Communication Technologies, Kyiv</h3>
+                <span class="dates">2023 – 2027</span>
+            </div>
+            <p class="meta">Bachelor’s degree, Information Systems and Technologies (in progress)</p>
+        </article>
+
+        <article class="entry">
+            <div class="entry-head">
+                <h3>Binary Studio Academy — Frontend Development Program</h3>
+                <span class="dates">May 2025 – Aug 2025</span>
+            </div>
+            <p>Intensive course: TypeScript, React, Redux Toolkit, Webpack; hands-on projects with code reviews.
+                <a href="https://bitbucket.org/reva1v/workspace/projects/BSA">bitbucket.org/reva1v</a></p>
+        </article>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <p>English — Intermediate (B1) · Ukrainian — Native</p>
+    </section>
+
+</main>
 
 </body>
-<script src="js/getList.js"></script>
-<script>
-    getList("lists/skills.html", "skills-container");
-    getList("lists/ai-tools.html", "ai-tools");
-    getList("lists/tools.html", "tools-container");
-    getList("lists/industry-knowledge.html", "industry-knowledge-container");
-</script>
 </html>

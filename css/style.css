@@ -1,370 +1,274 @@
-@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/*
+ * ATS-first layout: one column, real text, standard section headings,
+ * no tables/text boxes/icons inside the CV body. Only the floating
+ * buttons are decorative and they are hidden in print.
+ */
 
 :root {
-    --font-color-secondary: #646f7a;
-    --font-color-link-active: #444c51;
-    --font-size--16px: clamp(0.5rem, 0.1rem + 1.6vw, 1rem);;
-    --size--132px: clamp(3.125rem, -0.975rem + 16.4vw, 8.25rem);
+    --text: #1a1d21;
+    --muted: #555d66;
+    --accent: #1f4e79;
+    --rule: #d5dae0;
+    --page-bg: #2b2d31;
+    --base: 10.5pt;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 html {
-    font-family: "Funnel Display", serif;
-    font-style: normal;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: var(--text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
 body {
-    background: #232323;
+    background: var(--page-bg);
+    margin: 0;
+    padding: 40px 16px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 40px;
     flex-direction: column;
+    align-items: center;
 }
 
-li {
-    font-size: var(--font-size--16px);
-    list-style: none;
+.page {
+    background: #fff;
+    width: 210mm;
+    max-width: 100%;
+    padding: 14mm 15mm;
+    font-size: var(--base);
+    line-height: 1.38;
+    box-shadow: 0 0 24px rgba(0, 0, 0, .45);
 }
 
-ul {
+/* Cyrillic text runs longer; a slightly smaller base keeps the UA version on 2 pages */
+html[lang="uk"] .page {
+    font-size: 10pt;
+}
+
+/* ---------- header ---------- */
+
+.cv-header h1 {
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    margin: 0;
+    line-height: 1.15;
+}
+
+.cv-header .headline {
+    font-size: 12pt;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 3px 0 6px;
+}
+
+.contact {
+    margin: 0;
     padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 0;
+    color: var(--muted);
+    font-size: 9.5pt;
 }
 
-h1 {
-    font-size: clamp(1rem, 0.2rem + 3.2vw, 2rem);
-    margin: 0;
-}
-
-h2 {
-    font-size: clamp(0.75rem, 0.15rem + 2.4vw, 1.5rem);
-    margin: 20px 0 0 0;
-    font-weight: 100;
-}
-
-h3 {
-    font-size: clamp(0.585rem, 0.117rem + 1.872vw, 1.17rem);
-    margin: 0;
-}
-
-h4 {
-    font-size: var(--font-size--16px);
-    text-transform: uppercase;
-    font-weight: 100;
-    margin: 0 0 10px;
-}
-
-h5 {
-    font-size: clamp(0.415rem, 0.083rem + 1.328vw, 0.83rem);
-    color: var(--font-color-secondary);
-    font-weight: 100;
-    margin: 10px 0 10px;
-}
-
-p {
-    font-size: var(--font-size--16px);
-    margin: 0;
+.contact li:not(:last-child)::after {
+    content: "|";
+    margin: 0 7px;
+    color: var(--rule);
 }
 
 a {
-    font-size: var(--font-size--16px);
+    color: inherit;
+    text-decoration: none;
 }
 
-a:link {
-    color: var(--font-color-secondary);
+a:hover {
+    text-decoration: underline;
 }
 
-a:visited {
-    color: var(--font-color-secondary);
+/* ---------- sections ---------- */
+
+section {
+    margin-top: 12px;
 }
 
-a:active {
-    color: var(--font-color-link-active);
+h2 {
+    font-size: 10.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 2px;
+    margin: 0 0 6px;
 }
 
-button {
+p {
+    margin: 0;
+}
+
+.skills {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.skills li {
+    margin-bottom: 2px;
+}
+
+.skills strong {
+    font-weight: 600;
+}
+
+/* ---------- entries (jobs, projects, education) ---------- */
+
+.entry + .entry {
+    margin-top: 10px;
+}
+
+.entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+}
+
+.entry h3 {
+    font-size: 10.5pt;
+    font-weight: 600;
+    margin: 0;
+}
+
+.entry .dates {
+    white-space: nowrap;
+    color: var(--muted);
+    font-size: 9.5pt;
+}
+
+.entry .meta {
+    color: var(--muted);
+    font-size: 9.5pt;
+    margin: 1px 0 3px;
+}
+
+.entry ul {
+    margin: 3px 0 0;
+    padding-left: 16px;
+}
+
+.entry li {
+    margin-bottom: 2px;
+}
+
+.entry li::marker {
+    color: var(--muted);
+}
+
+.subhead {
+    font-weight: 600;
+    margin: 8px 0 0;
+}
+
+.subhead + .meta {
+    margin-top: 0;
+}
+
+/* ---------- screen-only controls ---------- */
+
+.controls button {
     position: fixed;
-    padding: 10px 15px;
-    background-color: #738089;
-    color: white;
-    border: none;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    font: 500 14px "Inter", Arial, sans-serif;
+    color: #fff;
+    background: #44505c;
+    border: 0;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
 }
 
-button:hover {
-    background-color: #444c51;
+.controls button:hover {
+    background: #2e363f;
 }
 
 .download-pdf-button {
-    bottom: 20px;
     right: 20px;
 }
 
 .change-language-button {
-    bottom: 20px;
     left: 20px;
 }
+
+@media screen and (max-width: 760px) {
+    body {
+        padding: 0 0 80px;
+    }
+
+    .page {
+        padding: 24px 16px;
+        box-shadow: none;
+    }
+
+    .entry-head {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .btn-text {
+        display: none;
+    }
+}
+
+/* ---------- print / PDF ---------- */
 
 @page {
     size: A4;
     margin: 0;
 }
 
-.page {
-    background: white;
-    width: 21cm;
-    min-height: 29.7cm;
-    margin-bottom: 35px;
-    padding: 55px;
-    box-shadow: rgba(7, 7, 6, 5) 0 0 20px 10px;
-    gap: 30px;
-    box-sizing: border-box;
-}
-
 @media print {
-    .download-pdf-button,
-    .change-language-button {
+    .controls {
         display: none !important;
     }
 
     body {
-        background: white !important;
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        background: #fff;
+        padding: 0;
+        display: block;
     }
 
     .page {
-        box-shadow: none;
-        padding: 10mm 15mm;
-        margin: 0;
         width: 100%;
-        min-height: auto;
-        height: auto;
-        display: block !important;
-        page-break-after: always;
-        overflow: visible;
-    }
-
-    .page:last-child {
-        page-break-after: auto;
-    }
-}
-
-.profile-header {
-    margin-bottom: 15px;
-}
-
-.summary {
-    color: var(--font-color-secondary);
-    margin-top: 10px;
-    line-height: 1.4;
-}
-
-.projects {
-    margin-bottom: 25px;
-}
-
-.projects p {
-    margin-bottom: 5px;
-}
-
-.avatar {
-    width: var(--size--132px);
-    height: var(--size--132px);
-    overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 2px 2px 20px -10px #000000;
-}
-
-.personalPhoto {
-    width: var(--size--132px);
-    height: var(--size--132px);
-}
-
-.info-columns {
-    gap: 50px;
-    display: flex;
-}
-
-.history-colum {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.history-colum ul {
-    display: grid;
-    gap: 25px;
-}
-
-.experience {
-    margin-bottom: 25px;
-}
-
-.experience p {
-    margin-bottom: 5px;
-}
-
-.info-colum {
-    color: var(--font-color-secondary);
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.info-block {
-    width: clamp(8.125rem, -0.375rem + 34vw, 18.75rem);
-}
-
-.info-block ul {
-    display: grid;
-    gap: 5px;
-    margin-top: 5px;
-}
-
-.tools__list ul {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px 5px;
-}
-
-.tools__list li {
-    display: inline;
-}
-
-.tools__list li:not(:last-child)::after {
-    content: ",";
-}
-
-.skills__list ul {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px 5px;
-}
-
-.skills__list li {
-    display: inline;
-}
-
-.skills__list li:not(:last-child)::after {
-    content: ",";
-}
-
-@media (max-width: 900px) {
-    body {
-        /*background: white;*/
-        padding: 0 40px;
-    }
-
-    .page {
         box-shadow: none;
-        padding: 35px 40px;
-        min-height: auto;
-        width: 100%;
+        padding: 12mm 14mm;
+        /* repeat the page padding on every printed page (@page margin stays 0 to hide browser headers) */
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
     }
 
-    .info-columns {
-        gap: 55px;
+    h2,
+    .subhead,
+    .entry-head,
+    .entry .meta {
+        break-after: avoid;
     }
 
-    .download-pdf-button {
-        right: 40px;
+    .entry li,
+    .entry p,
+    .skills li {
+        break-inside: avoid;
     }
-
-    .change-language-button {
-        left: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 0 25px;
-        /*margin-bottom: 50px;*/
-    }
-
-    .page{
-        padding: 25px 30px;
-        margin-bottom: 25px;
-    }
-
-    button {
-        padding: 15px 30px;
-    }
-
-    .change-language-button i {
-        font-size: 1.5rem;
-    }
-
-    .download-pdf-button i {
-        font-size: 1.5rem;
-    }
-
-    .btn-text {
-        display: none;
-    }
-
-    .profile-header h2 {
-        margin: 5px 0 0 0;
-    }
-
-    .info-columns {
-        gap: 30px;
-    }
-
-    .history-colum ul {
-        gap: 15px;
-        margin: 10px 0 10px 0;
-    }
-
-    .experience {
-        margin-bottom: 20px;
-    }
-
-}
-
-@media (max-width: 400px) {
-    body {
-        padding: 0 17px;
-        /*margin-bottom: 60px;*/
-    }
-
-    .page{
-        padding: 15px 20px;
-        margin-bottom: 15px;
-    }
-
-    .profile-header h2 {
-        margin: 0;
-    }
-
-    h5 {
-        margin: 5px 0 5px 0;
-    }
-
-    .info-columns {
-        gap: 25px;
-    }
-
-    .info-colum {
-        gap: 15px;
-    }
-
-    .history-colum {
-        gap: 15px;
-    }
-
-    .history-colum ul {
-        gap: 10px;
-        margin: 5px 0 5px 0;
-    }
-
 }
